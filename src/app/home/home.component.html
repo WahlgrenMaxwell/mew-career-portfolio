@@ -3,22 +3,22 @@
     <div class="hero">
       <div class="hero-container">
         <div class="hero-container_first-image">
-          <img class="galleryImg" alt="Devils Bridge, Arizona"
+          <img class="galleryImg" alt="Devils Bridge, Arizona" loading="lazy"
                src="/assets/images/bridge.f8eb772070a7b6fb8ae3.jpeg" />
         </div>
         <div class="hero-container_second-image">
-          <img class="galleryImg" alt="Toms Thumb, Arizona"
+          <img class="galleryImg" alt="Toms Thumb, Arizona" loading="lazy"
                src="/assets/images/mountains.8e85abc96b68c5f769ed.jpeg" />
         </div>
         <div class="hero-container_first-text">
           <h1>Oh, the places you'll go!</h1>
         </div>
         <div class="hero-container_third-image">
-          <img class="galleryImg" alt="Waterhole Canyon, Arizona"
+          <img class="galleryImg" alt="Waterhole Canyon, Arizona" loading="lazy"
                src="/assets/images/canyon.137d449c5e60162d86b4.jpeg" />
         </div>
         <div class="hero-container_fourth-image">
-          <img class="galleryImg" alt="Talum, Mexico"
+          <img class="galleryImg" alt="Talum, Mexico" loading="lazy"
                src="/assets/images/beach.77884e791c2e02170db7.jpeg" />
         </div>
       </div>
@@ -38,17 +38,5 @@
   </div>
   <div class="container">
     <hr />
-  </div>
-  <div class="container" *ngIf="blogPosts$ | async as blogPosts">
-    <div class="card mb-3" *ngFor="let blogPost of blogPosts.items">
-      <img [src]="blogPost.fields.featuredImage.fields.file.url" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h3 class="card-title">{{ blogPost.fields.title }}</h3>
-        <p class="author">By: {{ blogPost.fields.author }}</p>
-        <p class="card-text">{{ blogPost.fields.summary }}</p>
-        <p class="card-text"><small class="text-muted">Last updated: {{ blogPost.fields.updatedDate }}</small></p>
-        <a [routerLink]="['blog',blogPost.sys.id ]" class="btn btn-primary">Read More</a>
-      </div>
-    </div>
   </div>
 </div>

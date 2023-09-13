@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="mew-hero">
+    <h1>Dive into Thoughts! 🚀</h1>
+    <h3>Exploring code, creativity, and connections!</h3>    
+  </div>
+  <hr/>
+  <div class="container" *ngIf="blogPosts$ | async as blogPosts">
+    <div class="card mb-3" *ngFor="let blogPost of blogPosts.items">
+      <img [src]="blogPost.fields.featuredImage.fields.file.url" class="card-img-top" alt="Featured Image" loading="lazy">
+      <div class="card-body">
+        <h3 class="card-title">{{ blogPost.fields.title }}</h3>
+        <p class="author">By: {{ blogPost.fields.author }}</p>
+        <p class="card-text">{{ blogPost.fields.summary }}</p>
+        <p class="card-text"><small class="text-muted">Last updated: {{ blogPost.fields.updatedDate }}</small></p>
+        <a [routerLink]="[ blogPost.sys.id ]" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+</div>

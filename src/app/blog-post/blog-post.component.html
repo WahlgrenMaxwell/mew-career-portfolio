@@ -1,8 +1,9 @@
 <main *ngIf="blogPost$ | async as blogPost">
     <div class="post-container">
-        <img [src]="blogPost.fields.featuredImage.fields.file.url" alt="">
+        <img [src]="blogPost.fields.featuredImage.fields.file.url" alt="Featured Image" loading="lazy">
         <h3>{{ blogPost.fields.title }}</h3>
-        <p class="author">{{ blogPost.fields.author }}</p>
+        <p class="author">By {{ blogPost.fields.author }}</p>
+        <hr />
         <div class="content">
             <div [innerHtml]="blogPost.fields.blogContent | toHtml">
             </div>

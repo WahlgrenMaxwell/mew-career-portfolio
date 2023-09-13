@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { ToHtmlPipe } from './to-html.pipe';
+import { BlogPostsComponent } from './blog-posts/blog-posts.component';
+import { DevOfCodesComponent } from './dev-of-codes/dev-of-codes.component';
 
 @NgModule({
   declarations: [
@@ -23,16 +25,20 @@ import { ToHtmlPipe } from './to-html.pipe';
     HomeComponent,
     FooterComponent,
     BlogPostComponent,
-    ToHtmlPipe
+    ToHtmlPipe,
+    BlogPostsComponent,
+    DevOfCodesComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'about', component: AboutComponent },
+      { path: 'blog', component: BlogPostsComponent },
+      { path: 'blog/:id', component: BlogPostComponent },
       { path: 'contact', component: ContactComponent },
+      { path: 'devOfCodes', component: DevOfCodesComponent},
       { path: 'experience', component: ExperienceComponent },
-      { path: 'blog/:id', component: BlogPostComponent }
     ]),
     NgbModule
   ],
