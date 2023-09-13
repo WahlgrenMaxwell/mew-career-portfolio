@@ -10,6 +10,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { BlogPostComponent } from './blog-post/blog-post.component';
+import { ToHtmlPipe } from './to-html.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FooterComponent } from './footer/footer.component';
     ContactComponent,
     ExperienceComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    BlogPostComponent,
+    ToHtmlPipe
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,8 @@ import { FooterComponent } from './footer/footer.component';
       { path: '', component: HomeComponent },
       { path: 'about', component: AboutComponent },
       { path: 'contact', component: ContactComponent },
-      { path: 'experience', component: ExperienceComponent }
+      { path: 'experience', component: ExperienceComponent },
+      { path: 'blog/:id', component: BlogPostComponent }
     ]),
     NgbModule
   ],

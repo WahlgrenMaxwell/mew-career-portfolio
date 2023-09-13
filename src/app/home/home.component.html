@@ -1,20 +1,5 @@
 <div class="container">
   <div class="container">
-    <hr />
-  </div>
-  <div class="container mt-5">
-    <div class="marquee-parent">
-      <div class="marquee-child">
-        <p>
-          Congratulations! Today is your day. You're off to Great Places! You're off and away!
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <hr />
-  </div>
-  <div class="container">
     <div class="hero">
       <div class="hero-container">
         <div class="hero-container_first-image">
@@ -41,5 +26,29 @@
   </div>
   <div class="container">
     <hr />
+  </div>
+  <div class="container mt-5">
+    <div class="marquee-parent">
+      <div class="marquee-child">
+        <p>
+          Congratulations! Today is your day. You're off to Great Places! You're off and away!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <hr />
+  </div>
+  <div class="container" *ngIf="blogPosts$ | async as blogPosts">
+    <div class="card mb-3" *ngFor="let blogPost of blogPosts.items">
+      <img [src]="blogPost.fields.featuredImage.fields.file.url" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="card-title">{{ blogPost.fields.title }}</h3>
+        <p class="author">By: {{ blogPost.fields.author }}</p>
+        <p class="card-text">{{ blogPost.fields.summary }}</p>
+        <p class="card-text"><small class="text-muted">Last updated: {{ blogPost.fields.updatedDate }}</small></p>
+        <a [routerLink]="['blog',blogPost.sys.id ]" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
   </div>
 </div>
