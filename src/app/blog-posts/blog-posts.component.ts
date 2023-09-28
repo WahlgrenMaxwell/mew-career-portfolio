@@ -13,7 +13,6 @@ export class BlogPostsComponent implements OnInit {
   blogPosts$ : Observable<any> | undefined;
   
   ngOnInit() : void {
-    this.blogPosts$ = this.contentfulService.getAllEntries();
+    this.blogPosts$ = this.contentfulService.getEntriesByType("blogPost");
   }
-
 }

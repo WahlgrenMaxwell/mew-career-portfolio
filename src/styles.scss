@@ -39,6 +39,15 @@ h1 {
   line-height: 38.4px;
 }
 
+h2 {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 32.4px;
+}
+
 h3 {
   font-family: Tahoma, Verdana, Segoe, sans-serif;
   font-size: 24px;
@@ -83,6 +92,11 @@ pre {
   margin: 50px 0px 50px 0px;
   position: relative;
   text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
 }
 
 .author {

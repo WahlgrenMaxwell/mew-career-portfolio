@@ -15,8 +15,42 @@ export class ContentfulService {
     accessToken: environment.accessToken
   });
 
-  getAllEntries() {
-    const promise = this.client.getEntries()
+  getUnreadBooks() {
+    const promise = this.client.getEntries({
+      content_type: "sacredText",
+      "fields.read": false,
+      "fields.reading": false
+    });
+    return from(promise);
+  }
+
+  getReadingBooks() {
+    const promise = this.client.getEntries({
+      content_type: "sacredText",
+      "fields.reading": true
+    });
+    return from(promise);
+  }
+
+  getReadBooks() {
+    const promise = this.client.getEntries({
+      content_type: "sacredText",
+      "fields.read": true,
+      "fields.reading": false
+    });
+    return from(promise);
+  }
+
+  getEntriesByTypeAndFeature(type: string, query: object) {
+    const promise = this.client.getEntries(Object.assign({
+      content_type: type
+    }, query))
+    .then(res => res.items);
+    return from(promise);
+  }
+
+  getEntriesByType(type: string) {
+    const promise = this.client.getEntries({content_type: type});
     return from(promise);
   }
 

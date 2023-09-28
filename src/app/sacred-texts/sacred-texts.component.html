@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="mew-hero">
+        <h1 class="title">Sacred Texts 📚</h1>
+        <h3>A reader lives a thousand lives before he dies</h3>
+      </div>
+    <hr/>
+    <div class="d-flex flex-lg-row flex-column justify-content-between align-items-stretch">
+      <div class="container" *ngIf="unreadTexts$ | async as unreadTexts">
+        <h2>Backlog</h2>
+        <hr/>
+        <div class="card-container">
+          <div class="card mb-3 overflow-auto" *ngFor="let unreadText of unreadTexts.items">
+            <div class="card-body">
+              <h3 class="card-title">{{ unreadText.fields.title }}</h3>
+              <p class="author">By: {{ unreadText.fields.author }}</p>
+              <p class="card-text"><small class="text-muted">{{ unreadText.fields.summary }}</small></p>
+              <a [routerLink]="[ '/sacredtext/', unreadText.sys.id, unreadText.fields.isbn ]" class="btn btn-primary">More info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" *ngIf="readingText$ | async as readingText">
+        <h2>Reading</h2>
+        <hr/>
+        <div class="card-container">
+          <div class="card mb-3" *ngFor="let reading of readingText.items">
+            <div class="card-body">
+              <h3 class="card-title">{{ reading.fields.title }}</h3>
+              <p class="author">By: {{ reading.fields.author }}</p>
+              <p class="card-text"><small class="text-muted">{{ reading.fields.summary }}</small></p>
+              <a [routerLink]="[ '/sacredtext/', reading.sys.id, reading.fields.isbn ]" class="btn btn-primary">More info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" *ngIf="sacredTexts$ | async as sacredTexts">
+        <h2>Finished</h2>
+        <hr/>
+        <div class="card-container">
+          <div class="card mb-3" *ngFor="let sacredText of sacredTexts.items">
+            <div class="card-body">
+              <h3 class="card-title">{{ sacredText.fields.title }}</h3>
+              <p class="author">By: {{ sacredText.fields.author }}</p>
+              <p class="card-text"><small class="text-muted">{{ sacredText.fields.summary }}</small></p>
+              <a [routerLink]="[ '/sacredtext/', sacredText.sys.id, sacredText.fields.isbn ]" class="btn btn-primary">More info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

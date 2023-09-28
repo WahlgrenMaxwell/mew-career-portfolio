@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,6 +15,8 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 import { ToHtmlPipe } from './to-html.pipe';
 import { BlogPostsComponent } from './blog-posts/blog-posts.component';
 import { DevOfCodesComponent } from './dev-of-codes/dev-of-codes.component';
+import { SacredTextsComponent } from './sacred-texts/sacred-texts.component';
+import { SacredTextComponent } from './sacred-text/sacred-text.component';
 
 @NgModule({
   declarations: [
@@ -27,19 +30,27 @@ import { DevOfCodesComponent } from './dev-of-codes/dev-of-codes.component';
     BlogPostComponent,
     ToHtmlPipe,
     BlogPostsComponent,
-    DevOfCodesComponent
+    DevOfCodesComponent,
+    SacredTextsComponent,
+    SacredTextComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'about', component: AboutComponent },
       { path: 'blog', component: BlogPostsComponent },
       { path: 'blog/:id', component: BlogPostComponent },
+      { path: 'sacredtexts', component: SacredTextsComponent },
+      { path: 'sacredtext/:id/:isbn', component: SacredTextComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'devOfCodes', component: DevOfCodesComponent},
-      { path: 'experience', component: ExperienceComponent },
-    ]),
+      { path: 'experience', component: ExperienceComponent }
+      ],
+      {
+        scrollPositionRestoration: 'enabled'
+      }),
     NgbModule
   ],
   providers: [],
