@@ -3,8 +3,7 @@
         <img [src]="blogPost.fields.featuredImage.fields.file.url" alt="Featured Image" loading="lazy">
         <h3>{{ blogPost.fields.title }}</h3>
         <p class="author">By {{ blogPost.fields.author }}</p>
-        <p class="author">Total Pages: {{ blogPost.fields.pages }}</p>
-        <p class="author">{{ blogPost.fields.rating }} of 5</p>
+        <p class="card-text"><small class="text-muted">Published On: {{ blogPost.fields.updatedDate }}</small></p>
         <hr />
         <div class="content">
             <div [innerHtml]="blogPost.fields.blogContent | toHtml">
