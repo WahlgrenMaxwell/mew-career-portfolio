@@ -17,6 +17,7 @@ import { BlogPostsComponent } from './blog-posts/blog-posts.component';
 import { DevOfCodesComponent } from './dev-of-codes/dev-of-codes.component';
 import { SacredTextsComponent } from './sacred-texts/sacred-texts.component';
 import { SacredTextComponent } from './sacred-text/sacred-text.component';
+import { WrongRouteComponent } from './wrong-route/wrong-route.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SacredTextComponent } from './sacred-text/sacred-text.component';
     BlogPostsComponent,
     DevOfCodesComponent,
     SacredTextsComponent,
-    SacredTextComponent
+    SacredTextComponent,
+    WrongRouteComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,8 @@ import { SacredTextComponent } from './sacred-text/sacred-text.component';
       { path: 'sacredtext/:id/:isbn', component: SacredTextComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'devOfCodes', component: DevOfCodesComponent},
-      { path: 'experience', component: ExperienceComponent }
+      { path: 'experience', component: ExperienceComponent },
+      { path: '**', component: WrongRouteComponent }
       ],
       {
         scrollPositionRestoration: 'enabled'
