@@ -177,17 +177,26 @@
   }
 }
 
-@media (min-width: 0px) and (max-width: 480px) {
-  .about-container {
-    width: 100%;
-    padding: 32px;
+@media (min-width: 0px) and (max-width: 768px) {
+  .container-timeline {
+    padding-top: 16px;
   }
-}
 
-@media (min-width: 481px) and (max-width: 600px) {
-}
+  .timeline {
+    width: 100%;
+  }
 
-@media (min-width: 601px) and (max-width: 768px) {
+  .timeline ul {
+    padding: 0px!important;
+  }
+  
+  .timeline ul li {
+    width: 100%;
+  }
+
+  .timeline-date {
+    color: #ffffff;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 900px) {
