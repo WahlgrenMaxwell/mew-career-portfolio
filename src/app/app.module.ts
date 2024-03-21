@@ -14,7 +14,6 @@ import { FooterComponent } from './footer/footer.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { ToHtmlPipe } from './to-html.pipe';
 import { BlogPostsComponent } from './blog-posts/blog-posts.component';
-import { DevOfCodesComponent } from './dev-of-codes/dev-of-codes.component';
 import { SacredTextsComponent } from './sacred-texts/sacred-texts.component';
 import { SacredTextComponent } from './sacred-text/sacred-text.component';
 import { WrongRouteComponent } from './wrong-route/wrong-route.component';
@@ -31,7 +30,6 @@ import { WrongRouteComponent } from './wrong-route/wrong-route.component';
     BlogPostComponent,
     ToHtmlPipe,
     BlogPostsComponent,
-    DevOfCodesComponent,
     SacredTextsComponent,
     SacredTextComponent,
     WrongRouteComponent
@@ -47,7 +45,6 @@ import { WrongRouteComponent } from './wrong-route/wrong-route.component';
       { path: 'sacredtexts', component: SacredTextsComponent },
       { path: 'sacredtext/:id/:isbn', component: SacredTextComponent },
       { path: 'contact', component: ContactComponent },
-      { path: 'devOfCodes', component: DevOfCodesComponent},
       { path: 'experience', component: ExperienceComponent },
       { path: '**', component: WrongRouteComponent }
       ],
