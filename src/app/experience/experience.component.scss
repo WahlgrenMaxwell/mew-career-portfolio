@@ -32,6 +32,16 @@
   color: #000000;
 }
 
+.container-cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .container-cv a {
+    width: 400px;
+  }
+
 .container-sizing {
   margin: 0;
   padding: 0;
