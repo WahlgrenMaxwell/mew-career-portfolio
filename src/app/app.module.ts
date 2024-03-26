@@ -34,7 +34,7 @@ import { SitemapComponent } from './sitemap/sitemap.component';
     SacredTextsComponent,
     SacredTextComponent,
     WrongRouteComponent,
-    SitemapComponent
+    SitemapComponent,
   ],
   imports: [
     BrowserModule,
