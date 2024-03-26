@@ -1,0 +1,17 @@
+.container-pages {
+    display: flex;
+}
+
+    .container-pages .pages-list {
+        width: 256px;
+    }
+
+        .container-pages .pages-list ul {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .container-pages .pages-list a {
+            text-decoration: none;
+        }

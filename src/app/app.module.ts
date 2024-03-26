@@ -17,6 +17,7 @@ import { BlogPostsComponent } from './blog-posts/blog-posts.component';
 import { SacredTextsComponent } from './sacred-texts/sacred-texts.component';
 import { SacredTextComponent } from './sacred-text/sacred-text.component';
 import { WrongRouteComponent } from './wrong-route/wrong-route.component';
+import { SitemapComponent } from './sitemap/sitemap.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { WrongRouteComponent } from './wrong-route/wrong-route.component';
     BlogPostsComponent,
     SacredTextsComponent,
     SacredTextComponent,
-    WrongRouteComponent
+    WrongRouteComponent,
+    SitemapComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +46,7 @@ import { WrongRouteComponent } from './wrong-route/wrong-route.component';
       { path: 'blog/:id', component: BlogPostComponent },
       { path: 'sacredtexts', component: SacredTextsComponent },
       { path: 'sacredtext/:id/:isbn', component: SacredTextComponent },
+      { path: 'sitemap', component: SitemapComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'experience', component: ExperienceComponent },
       { path: '**', component: WrongRouteComponent }
