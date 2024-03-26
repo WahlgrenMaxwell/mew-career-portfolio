@@ -1,0 +1,31 @@
+.legal-links {
+    list-style: none;
+    margin: 0;
+}
+
+    .legal-links .legal-links-item {
+        margin-inline-end: 8px;
+    }
+
+    .legal-links-item:after {
+        content: "";
+        position: absolute;
+        height: 16px;
+        width: 1px;
+        background-color: gray;
+        margin: 3px 0;
+    }
+
+    .legal-links-item:last-child::after {
+        display: none;
+    }
+
+    .legal-links .legal-links-item a {
+        color: gray;
+        text-decoration: none;
+        padding-inline-end: 8px;
+    }
+
+    .legal-links .legal-links-item a:hover {
+        text-decoration: underline;
+    }
