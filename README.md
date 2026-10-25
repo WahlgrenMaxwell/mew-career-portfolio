@@ -1,5 +1,7 @@
 # Max Wahlgren's Portfolio Website
 
+> This is the 2024 site. My current work lives at [DevOfCodes](https://devofcodes.com), my one-person software company.
+
 Welcome to the source of [maxwahlgren.com](https://www.maxwahlgren.com)! This is my personal space on the web where I showcase my skills, share my experiences, and communicate my thoughts through blog posts.
 
 ## Description 📝
@@ -17,7 +19,7 @@ My portfolio is a comprehensive presentation of my journey as a software develop
 
 - **About**: Get to know a little more about me, my journey, and my passion.
 - **Blog**: Dive deep into my thoughts, tutorials, and opinions on various tech topics.
-- **Contact**: Let's get in touch! I'm always open to new opportunities and connections.
+- **Contact**: Get in touch. For work, see [DevOfCodes](https://devofcodes.com).
 - **Dev of Codes**: A special corner dedicated to interesting coding challenges and solutions.
 - **Experience**: A detailed look into my professional journey, roles, and contributions.
 - **Reading Section**: A unique feature where I share books I'm currently reading or have read. This is integrated with Contentful CMS to provide a list of books and uses the Google Books API to fetch detailed information about each book. Additionally, you'll find my personal markdown styled notes for each book - a combination of summaries, reflections, and key takeaways.
